@@ -1,0 +1,30 @@
+@keyframes waving {
+  0% { transform: translateY(0) }
+  50% { transform: translateY(-10px) }
+  100% { transform: translateY(0) }
+}
+
+@-webkit-keyframes waving {
+  0% { transform: translateY(0) }
+  50% { transform: translateY(-10px) }
+  100% { transform: translateY(0) }
+}
+
+.waving-string {
+  display: inline-block;
+  animation: waving 2000ms ease-in-out infinite;
+}
+
+.waving-string:nth-child(1) { animation-delay: 0; }
+.waving-string:nth-child(2) { animation-delay: 100ms; }
+.waving-string:nth-child(3) { animation-delay: 200ms; }
+.waving-string:nth-child(4) { animation-delay: 300ms; }
+.waving-string:nth-child(5) { animation-delay: 400ms; }
+.waving-string:nth-child(6) { animation-delay: 500ms; }
+.waving-string:nth-child(7) { animation-delay: 600ms; }
+.waving-string:nth-child(8) { animation-delay: 700ms; }
+.waving-string:nth-child(9) { animation-delay: 800ms; }
+.waving-string:nth-child(10) { animation-delay: 900ms; }
+.waving-string:nth-child(11) { animation-delay: 1000ms; }
+.waving-string:nth-child(12) { animation-delay: 1100ms; }
+.waving-string:nth-child(13) { animation-delay: 1200ms; }
