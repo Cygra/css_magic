@@ -9,3 +9,5 @@ Deployed at https://cygra.github.io/css_magic/.
 ```
 $ gatsby develop
 ```
+
+To deploy see: https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/
