@@ -9,7 +9,9 @@ const Item = ({ children, title }) => (
       marginBottom: '10px'
     }}></div>
     <h3>> {title}</h3>
-    {children}
+    <div className={`${title.toLowerCase()}-item`}>
+      {children}
+    </div>
   </div>
 )
 

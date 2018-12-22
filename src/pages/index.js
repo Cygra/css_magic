@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import WavingString from '../components/WavingString'
+import Filter from '../components/Filter'
 
 const IndexPage = () => (
   <Layout>
@@ -14,6 +15,7 @@ const IndexPage = () => (
       </a>
     </p>
     <WavingString />
+    <Filter />
   </Layout>
 )
 
