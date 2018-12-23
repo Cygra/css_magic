@@ -12,7 +12,7 @@ const divMap = [
   'invert(0.8)',
   'opacity(0.5)',
   'brightness(3)',
-  'contrast(4)'
+  'contrast(4)',
 ]
 
 const Filter = () => (
