@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import WavingString from '../components/WavingString'
 import Filter from '../components/Filter'
-import AllRgb from '../components/AllRgb'
+import LinearGradient from '../components/LinearGradient'
 import Input from '../components/Input'
 
 const IndexPage = () => (
@@ -18,7 +18,7 @@ const IndexPage = () => (
     </p>
     <WavingString />
     <Filter />
-    <AllRgb />
+    <LinearGradient />
     <Input />
   </Layout>
 )
