@@ -639,3 +639,7 @@ code {
   padding: 0 5px;
   background-color: bisque;
 }
+
+input:focus {
+  outline: none;
+}
