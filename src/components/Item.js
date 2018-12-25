@@ -6,7 +6,7 @@ const Item = ({ children, title }) => (
     <div style={{
       height: '1px',
       backgroundColor: '#000',
-      marginBottom: '10px'
+      margin: '10px 0'
     }}></div>
     <h3>> {title}</h3>
     <div className={`${title.replace(/ /g, '-').toLowerCase()}-item`}>
