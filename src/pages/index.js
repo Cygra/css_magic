@@ -4,6 +4,7 @@ import SEO from '../components/seo'
 import WavingString from '../components/WavingString'
 import Filter from '../components/Filter'
 import AllRgb from '../components/AllRgb'
+import Input from '../components/Input'
 
 const IndexPage = () => (
   <Layout>
@@ -18,6 +19,7 @@ const IndexPage = () => (
     <WavingString />
     <Filter />
     <AllRgb />
+    <Input />
   </Layout>
 )
 
