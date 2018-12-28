@@ -9,4 +9,7 @@
 ```bash
 # Start development server
 $ gatsby develop
+
+# on Tencent Cloud Studio use
+$ gatsby develop -H 0.0.0.0
 ```
