@@ -6,6 +6,7 @@ import Filter from '../components/Filter'
 import LinearGradient from '../components/LinearGradient'
 import Input from '../components/Input'
 import Console from '../components/Console'
+import Cursor from '../components/Cursor'
 
 const IndexPage = () => (
   <Layout>
@@ -32,6 +33,7 @@ const IndexPage = () => (
     <LinearGradient />
     <Input />
     <Console />
+    <Cursor />
   </Layout>
 )
 
