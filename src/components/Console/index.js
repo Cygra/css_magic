@@ -1,11 +1,7 @@
 import React from 'react'
 import Item from "../Item"
 
-
-
 const Console = () => {
-
-
   console.log('%c Yoho ~', 'color: red')
   console.log('%c Yoho ~', 'color: blue')
   console.log('%c Yoho ~', 'color: white; background-color: black')
