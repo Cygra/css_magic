@@ -7,6 +7,7 @@ import LinearGradient from '../components/LinearGradient'
 import Input from '../components/Input'
 import Console from '../components/Console'
 import Cursor from '../components/Cursor'
+import HoverStyle from '../components/HoverStyle'
 
 const IndexPage = () => (
   <Layout>
@@ -34,6 +35,7 @@ const IndexPage = () => (
     <Input />
     <Console />
     <Cursor />
+    <HoverStyle />
   </Layout>
 )
 

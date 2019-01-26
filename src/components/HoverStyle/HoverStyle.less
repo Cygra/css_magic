@@ -1,0 +1,41 @@
+.hoverstyle-item {
+  .hoverstyle-item {
+    transition: all .3s;
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    user-select: none;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      height: 2px;
+      background-color: #485CBD;
+      transition: all .3s;
+    }
+    &:hover {
+      color: #485CBD;
+    }
+
+    &.item-a {
+      &::before {
+        left: 50%;
+        right: 50%;
+      }
+      &:hover::before {
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &.item-b {
+      &::before {
+        left: 0;
+        width: 0;
+      }
+      &:hover::before {
+        width: 100%;
+      }
+    }
+  }
+}
