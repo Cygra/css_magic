@@ -6,6 +6,7 @@ import cx from 'classnames'
 const Input = () => (
   <Item title="Input">
     {inputA()}
+    {inputB()}
   </Item>
 )
 
@@ -36,6 +37,30 @@ const inputA = () => {
       </div>
       {submitBtn(inputVal)}
       <button onClick={() => setInput('')}>Clear</button>
+    </div>
+  )
+}
+
+const inputB = () => {
+  const [inputVal, setInput] = useState('');
+  const [isInputFocus, setInputFocus] = useState(false)
+
+  return (
+    <div className="input-b">
+      <input
+        className={cx({ 'is-input-focus': isInputFocus })}
+        value={inputVal}
+        onChange={e => setInput(e.target.value)}
+        onFocus={() => setInputFocus(true)}
+        onBlur={() => setInputFocus(false)}
+        placeholder="Input something here!"
+      />
+      <div className={cx(
+        'btn-container',
+        { 'is-input-focus': isInputFocus }
+      )}>
+        {submitBtn(inputVal)}
+      </div>
     </div>
   )
 }
