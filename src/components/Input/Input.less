@@ -34,4 +34,36 @@
       height: 32px;
     }
   }
+
+  .input-b {
+    height: 32px;
+    width: 300px;
+    display: flex;
+    align-items: stretch;
+    input {
+      width: 100%;
+      transition: all .3s;
+      &.is-input-focus {
+        width: 200px;
+        margin-right: 10px;
+      }
+    }
+    .btn-container {
+      width: 0;
+      overflow: hidden;
+      display: flex;
+      transition: all .3s;
+      button {
+        flex: 1;
+        padding: 0;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      &.is-input-focus {
+        width: 90px;
+        align-items: stretch;
+      }
+    }
+  }
 }
