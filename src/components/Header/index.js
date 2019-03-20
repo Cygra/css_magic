@@ -5,6 +5,7 @@ import './Header.less'
 
 const Header = ({ siteTitle }) => (
   <div className="site-header">
+    <div className="pseudo-before" />
     <div className="site-header-content">
       <h1>
         <Link to="/" className="site-header-link">
@@ -12,6 +13,7 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
     </div>
+    <div className="pseudo-after" />
   </div>
 )
 

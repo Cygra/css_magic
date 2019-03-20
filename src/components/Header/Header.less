@@ -24,8 +24,8 @@
     }
   }
 
-  &::before,
-  &::after {
+  .pseudo-before,
+  .pseudo-after {
     display: block;
     z-index: -1;
     position: absolute;
@@ -37,11 +37,11 @@
     background-color: @theme;
   }
 
-  &::before {
+  .pseudo-before {
     transform: skew(0deg, 10deg) translateX(-50%);
   }
 
-  &::after {
+  .pseudo-after {
     transform: skew(0deg, -10deg) translateX(50%);
   }
 
