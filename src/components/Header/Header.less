@@ -1,31 +1,31 @@
 @import '../../constants/style.less';
 
 .site-header {
-  margin: 0 auto 1.45rem;
-  padding-bottom: 3rem;
-  position: relative;
-  clear: both;
+  margin: 0 auto 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   max-width: 960px;
   overflow: hidden;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .site-header-content {
-    padding: 1.45rem;
-
     h1 {
       margin: 0;
-      text-align: center;
-
       .site-header-link {
         color: @white;
         text-decoration: none;
         font-variant: small-caps;
       }
-
     }
   }
 
-  &::before,
-  &::after {
+  .pseudo-before,
+  .pseudo-after {
     display: block;
     z-index: -1;
     position: absolute;
@@ -36,13 +36,4 @@
     content: "";
     background-color: @theme;
   }
-
-  &::before {
-    transform: skew(0deg, 10deg) translateX(-50%);
-  }
-
-  &::after {
-    transform: skew(0deg, -10deg) translateX(50%);
-  }
-
 }
