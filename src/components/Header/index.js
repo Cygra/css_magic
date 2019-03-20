@@ -5,7 +5,9 @@ import './Header.less'
 
 const Header = ({ siteTitle }) => {
   const [scrollY, setScrollY] = useState(() => {
-    window.addEventListener('scroll', () => setScrollY(window.scrollY));
+    if (typeof window !== `undefined`) {
+      window.addEventListener('scroll', () => setScrollY(window.scrollY));
+    }
     return 0;
   });
 
