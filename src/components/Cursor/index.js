@@ -44,7 +44,7 @@ const Cursor = () => (
     </ul>
     <p>And the cursor can also be an image&nbsp;
       <span role="img" aria-label="right-hand-side">👉</span>
-      <span className="image-cursor-span"></span>
+      <span className="image-cursor-span" />
       <code>cursor: url(../../images/lock_black.png), auto;</code>
     </p>
   </Item>
