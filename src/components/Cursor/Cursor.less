@@ -1,3 +1,5 @@
+@import '../../constants/style.less';
+
 .cursor-item {
   ul {
     display: flex;
@@ -6,8 +8,9 @@
     li {
       margin-right: 4px;
       padding: 8px 32px;
-      background-color: #EEE;
+      background-color: @grey;
       user-select: none;
+      border-radius: 2px;
     }
   }
   p {
@@ -17,9 +20,10 @@
       width: 72px;
       height: 50px;
       margin: 0 4px;
-      background-color: #EEE;
+      background-color: @grey;
       display: inline-block;
       cursor: url(../../images/lock_black.png), auto;
+      border-radius: 2px;
     }
   }
 }
