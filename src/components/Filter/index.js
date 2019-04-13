@@ -65,13 +65,17 @@ const divMap = [
 
 const Filter = () => (
   <Item title="Filter">
-    Drag the slider&nbsp;<div className="filter-slider" />&nbsp;..
+    Drag the slider&nbsp;
+    <div className="filter-slider" />
+    &nbsp;..
     <div className="filter-item-container">
       <div className="filter-div">
-        <img src={dva} alt="dva"/>
+        <img src={dva} alt="dva" />
         <code>no filter;</code>
       </div>
-      {divMap.map(i => <FilterItem {...i} key={i.title} />)}
+      {divMap.map(i => (
+        <FilterItem {...i} key={i.title} />
+      ))}
     </div>
   </Item>
 )

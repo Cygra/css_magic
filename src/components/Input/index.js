@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Item from "../Item"
+import Item from '../Item'
 import './Input.less'
 import cx from 'classnames'
 
@@ -11,18 +11,13 @@ const Input = () => (
 )
 
 const submitBtn = val => (
-  <button onClick={() => alert(`${val ? val : 'Nothing'} submitted!`)}>
-    Submit
-  </button>
+  <button onClick={() => alert(`${val ? val : 'Nothing'} submitted!`)}>Submit</button>
 )
 
 const inputA = () => {
-  const [inputVal, setInput] = useState('');
+  const [inputVal, setInput] = useState('')
   const [isInputFocus, setInputFocus] = useState(false)
-  const cxNames = cx(
-    "input-title",
-    { 'on-top': inputVal !== '' || isInputFocus }
-  )
+  const cxNames = cx('input-title', { 'on-top': inputVal !== '' || isInputFocus })
 
   return (
     <div className="input-a">
@@ -42,7 +37,7 @@ const inputA = () => {
 }
 
 const inputB = () => {
-  const [inputVal, setInput] = useState('');
+  const [inputVal, setInput] = useState('')
   const [isInputFocus, setInputFocus] = useState(false)
 
   return (
@@ -55,10 +50,7 @@ const inputB = () => {
         onBlur={() => setInputFocus(false)}
         placeholder="Input something here!"
       />
-      <div className={cx(
-        'btn-container',
-        { 'is-input-focus': isInputFocus }
-      )}>
+      <div className={cx('btn-container', { 'is-input-focus': isInputFocus })}>
         {submitBtn(inputVal)}
       </div>
     </div>

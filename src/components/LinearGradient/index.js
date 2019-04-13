@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Item from "../Item"
+import Item from '../Item'
 import './LinearGradient.less'
 
 const styleEnum = {
@@ -9,7 +9,7 @@ const styleEnum = {
 }
 
 const LinearGradient = () => {
-  const [index, setIndex] = useState(1);
+  const [index, setIndex] = useState(1)
   return (
     <Item title="Linear Gradient">
       <div className="btn-group">
@@ -23,9 +23,9 @@ const LinearGradient = () => {
       {Array.from(Array(256).keys()).map(i => (
         <div
           key={i}
-          className='color-line'
+          className="color-line"
           style={{
-            backgroundImage: 'linear-gradient(to right, rgb(' + styleEnum[index](i) + '))'
+            backgroundImage: 'linear-gradient(to right, rgb(' + styleEnum[index](i) + '))',
           }}
         />
       ))}
