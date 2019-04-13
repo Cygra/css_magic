@@ -40,10 +40,17 @@ const cursorMap = [
 const Cursor = () => (
   <Item title="Cursor">
     <ul>
-      {cursorMap.map(i => <li key={i} style={{ cursor: i }}>{i}</li>)}
+      {cursorMap.map(i => (
+        <li key={i} style={{ cursor: i }}>
+          {i}
+        </li>
+      ))}
     </ul>
-    <p>And the cursor can also be an image&nbsp;
-      <span role="img" aria-label="right-hand-side">👉</span>
+    <p>
+      And the cursor can also be an image&nbsp;
+      <span role="img" aria-label="right-hand-side">
+        👉
+      </span>
       <span className="image-cursor-span" />
       <code>cursor: url(../../images/lock_black.png), auto;</code>
     </p>
