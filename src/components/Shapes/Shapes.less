@@ -1,0 +1,105 @@
+@width: 80px;
+
+.triangle-common {
+  width: @width;
+  height: @width;
+  background-color: transparent;
+}
+
+.triangle-hori {
+  border-top: @triangle-border-trans;
+  border-bottom: @triangle-border-trans;
+}
+
+.triangle-ver {
+  border-left: @triangle-border-trans;
+  border-right: @triangle-border-trans;
+}
+
+@triangle-border-trans: @width / 2 solid transparent;
+@triangle-border-trans2: @width solid transparent;
+@triangle-border-solid: @width solid black;
+
+.shapes-item {
+  display: flex;
+  flex-wrap: wrap;
+
+  .shape-div {
+    background: black;
+    margin-right: 5px;
+
+    &#circle {
+      width: @width;
+      padding-top: @width;
+      border-radius: 50%;
+    }
+
+    &#oval {
+      width: @width * 2;
+      padding-top: @width;
+      border-radius: 50%;
+    }
+
+    &#triangle-up {
+      .triangle-common;
+      .triangle-ver;
+      border-bottom: @triangle-border-solid;
+    }
+
+    &#triangle-down {
+      .triangle-common;
+      .triangle-ver;
+      border-top: @triangle-border-solid;
+    }
+
+    &#triangle-left {
+      .triangle-common;
+      .triangle-hori;
+      border-right: @triangle-border-solid;
+    }
+
+    &#triangle-right {
+      .triangle-common;
+      .triangle-hori;
+      border-left: @triangle-border-solid;
+    }
+
+    &#triangle-top-left {
+      .triangle-common;
+      border-top: @triangle-border-solid;
+      border-right: @triangle-border-trans2;
+    }
+
+    &#triangle-top-right {
+      .triangle-common;
+      border-top: @triangle-border-solid;
+      border-left: @triangle-border-trans2;
+    }
+
+    &#triangle-bottom-left {
+      .triangle-common;
+      border-bottom: @triangle-border-solid;
+      border-right: @triangle-border-trans2;
+    }
+
+    &#triangle-bottom-right {
+      .triangle-common;
+      border-bottom: @triangle-border-solid;
+      border-left: @triangle-border-trans2;
+    }
+
+    &#trapezoid {
+      .triangle-common;
+      border-left: @width / 4 solid transparent;
+      border-right: @width / 4 solid transparent;
+      border-bottom: @triangle-border-solid;
+    }
+
+    &#parallelogram {
+      margin-left: 20px;
+      width: @width;
+      padding-top: @width;
+      transform: skew(20deg);
+    }
+  }
+}

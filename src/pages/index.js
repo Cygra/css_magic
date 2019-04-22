@@ -9,6 +9,7 @@ import Console from '../components/Console'
 import Cursor from '../components/Cursor'
 import HoverStyle from '../components/HoverStyle'
 import DropCap from '../components/DropCap'
+import Shapes from '../components/Shapes'
 
 const IndexPage = () => (
   <Layout>
@@ -52,6 +53,7 @@ const IndexPage = () => (
     <Cursor />
     <HoverStyle />
     <DropCap />
+    <Shapes />
   </Layout>
 )
 
