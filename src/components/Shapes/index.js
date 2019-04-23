@@ -5,18 +5,18 @@ import './Shapes.less'
 const Shapes = () => {
   return (
     <Item title="Shapes">
-      <div className="shape-div" id="circle" />
-      <div className="shape-div" id="oval" />
-      <div className="shape-div" id="triangle-up" />
-      <div className="shape-div" id="triangle-down" />
-      <div className="shape-div" id="triangle-left" />
-      <div className="shape-div" id="triangle-right" />
-      <div className="shape-div" id="triangle-top-left" />
-      <div className="shape-div" id="triangle-top-right" />
-      <div className="shape-div" id="triangle-bottom-left" />
-      <div className="shape-div" id="triangle-bottom-right" />
-      <div className="shape-div" id="trapezoid" />
-      <div className="shape-div" id="parallelogram" />
+      <div id="circle" />
+      <div id="oval" />
+      <div id="triangle-up" />
+      <div id="triangle-down" />
+      <div id="triangle-left" />
+      <div id="triangle-right" />
+      <div id="triangle-top-left" />
+      <div id="triangle-top-right" />
+      <div id="triangle-bottom-left" />
+      <div id="triangle-bottom-right" />
+      <div id="trapezoid" />
+      <div id="parallelogram" />
     </Item>
   )
 }
