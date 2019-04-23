@@ -1,36 +1,19 @@
 @width: 80px;
 
-.triangle-common {
-  width: @width;
-  height: @width;
-  background-color: transparent;
+.triangle(@len1, @len2, @len3, @color: black) {
+  border-right: @len1 solid transparent;
+  border-left: @len2 solid transparent;
+  border-bottom: @len3 solid @color;
 }
 
-.triangle-hori {
-  border-top: @triangle-border-trans;
-  border-bottom: @triangle-border-trans;
+.isosceles-triangle(@len1, @len2, @color: black) {
+  .triangle(@len1, @len1, @len2, @color);
 }
 
-.triangle-ver {
-  border-left: @triangle-border-trans;
-  border-right: @triangle-border-trans;
+.right-triangle(@len1, @len2, @color: black) {
+  border-bottom: @len1 solid @color;
+  border-right: @len2 solid transparent;
 }
-
-.triangle-up {
-  .triangle-common;
-  .triangle-ver;
-  border-bottom: @triangle-border-solid;
-}
-
-.triangle-down {
-  .triangle-common;
-  .triangle-ver;
-  border-top: @triangle-border-solid;
-}
-
-@triangle-border-trans: @width / 2 solid transparent;
-@triangle-border-trans2: @width solid transparent;
-@triangle-border-solid: @width solid black;
 
 .shapes-item {
   display: flex;
@@ -52,55 +35,26 @@
       border-radius: 50%;
     }
 
-    &#triangle-up {
-      .triangle-up;
+    &#triangle {
+      background-color: transparent;
+      .triangle(@width, @width / 3, @width);
     }
 
-    &#triangle-down {
-      .triangle-down;
+    &#isosceles-triangle {
+      background-color: transparent;
+      .isosceles-triangle(@width / 2, @width);
     }
 
-    &#triangle-left {
-      .triangle-common;
-      .triangle-hori;
-      border-right: @triangle-border-solid;
-    }
-
-    &#triangle-right {
-      .triangle-common;
-      .triangle-hori;
-      border-left: @triangle-border-solid;
-    }
-
-    &#triangle-top-left {
-      .triangle-common;
-      border-top: @triangle-border-solid;
-      border-right: @triangle-border-trans2;
-    }
-
-    &#triangle-top-right {
-      .triangle-common;
-      border-top: @triangle-border-solid;
-      border-left: @triangle-border-trans2;
-    }
-
-    &#triangle-bottom-left {
-      .triangle-common;
-      border-bottom: @triangle-border-solid;
-      border-right: @triangle-border-trans2;
-    }
-
-    &#triangle-bottom-right {
-      .triangle-common;
-      border-bottom: @triangle-border-solid;
-      border-left: @triangle-border-trans2;
+    &#right-triangle {
+      background-color: transparent;
+      .right-triangle(@width, @width);
     }
 
     &#trapezoid {
-      .triangle-common;
-      border-left: @width / 4 solid transparent;
-      border-right: @width / 4 solid transparent;
-      border-bottom: @triangle-border-solid;
+      width: @width;
+      height: @width;
+      background-color: transparent;
+      .isosceles-triangle(@width / 4, @width);
     }
 
     &#parallelogram {
@@ -111,20 +65,56 @@
     }
 
     &#star {
+      .isosceles-triangle(@width / 2, @width);
+
       margin-left: 20px;
-      transform: scale(0.7);
       position: relative;
       top: -10px;
+      background-color: transparent;
 
-      .triangle-up;
-
+      transform: scale(0.7);
       &::after {
-        .triangle-down;
+        .isosceles-triangle(@width / 2, @width);
 
+        transform: rotate(180deg);
         position: absolute;
         content: '';
         top: @width / 3px;
         left: -@width / 2px;
+      }
+    }
+
+    &#star-five {
+      .isosceles-triangle(@width / 2, 28px);
+
+      background-color: transparent;
+      margin: @width / 4 0;
+      position: relative;
+      width: 0px;
+      height: 0px;
+
+      transform: rotate(35deg);
+
+      &::before {
+        .isosceles-triangle(12px, 32px);
+
+        position: absolute;
+        top: -18px;
+        left: -26px;
+
+        transform: rotate(-35deg);
+        content: '';
+      }
+
+      &::after {
+        .isosceles-triangle(@width / 2, 28px);
+
+        position: absolute;
+        top: 1.2px;
+        left: -42px;
+
+        transform: rotate(-70deg);
+        content: '';
       }
     }
   }
