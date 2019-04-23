@@ -16,6 +16,18 @@
   border-right: @triangle-border-trans;
 }
 
+.triangle-up {
+  .triangle-common;
+  .triangle-ver;
+  border-bottom: @triangle-border-solid;
+}
+
+.triangle-down {
+  .triangle-common;
+  .triangle-ver;
+  border-top: @triangle-border-solid;
+}
+
 @triangle-border-trans: @width / 2 solid transparent;
 @triangle-border-trans2: @width solid transparent;
 @triangle-border-solid: @width solid black;
@@ -41,15 +53,11 @@
     }
 
     &#triangle-up {
-      .triangle-common;
-      .triangle-ver;
-      border-bottom: @triangle-border-solid;
+      .triangle-up;
     }
 
     &#triangle-down {
-      .triangle-common;
-      .triangle-ver;
-      border-top: @triangle-border-solid;
+      .triangle-down;
     }
 
     &#triangle-left {
@@ -100,6 +108,24 @@
       width: @width;
       padding-top: @width;
       transform: skew(20deg);
+    }
+
+    &#star {
+      margin-left: 20px;
+      transform: scale(0.7);
+      position: relative;
+      top: -10px;
+
+      .triangle-up;
+
+      &::after {
+        .triangle-down;
+
+        position: absolute;
+        content: '';
+        top: @width / 3px;
+        left: -@width / 2px;
+      }
     }
   }
 }

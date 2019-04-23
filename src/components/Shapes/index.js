@@ -17,6 +17,7 @@ const Shapes = () => {
       <div id="triangle-bottom-right" />
       <div id="trapezoid" />
       <div id="parallelogram" />
+      <div id="star" />
     </Item>
   )
 }
