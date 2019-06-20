@@ -10,6 +10,7 @@ import Cursor from '../components/Cursor'
 import HoverStyle from '../components/HoverStyle'
 import DropCap from '../components/DropCap'
 import Shapes from '../components/Shapes'
+import Glitch from '../components/Glitch'
 
 const IndexPage = () => (
   <Layout>
@@ -54,6 +55,7 @@ const IndexPage = () => (
     <HoverStyle />
     <DropCap />
     <Shapes />
+    <Glitch />
   </Layout>
 )
 
