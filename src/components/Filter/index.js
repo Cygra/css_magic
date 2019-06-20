@@ -77,6 +77,10 @@ const Filter = () => (
         <FilterItem {...i} key={i.title} />
       ))}
     </div>
+    and see&nbsp;
+    <a href="https://cygra.github.io/easy-filter/" target="_blank" rel="noopener noreferrer">
+      easy-filter
+    </a>
   </Item>
 )
 

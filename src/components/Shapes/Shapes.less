@@ -1,0 +1,121 @@
+@width: 80px;
+
+.triangle(@len1, @len2, @len3, @color: black) {
+  border-right: @len1 solid transparent;
+  border-left: @len2 solid transparent;
+  border-bottom: @len3 solid @color;
+}
+
+.isosceles-triangle(@len1, @len2, @color: black) {
+  .triangle(@len1, @len1, @len2, @color);
+}
+
+.right-triangle(@len1, @len2, @color: black) {
+  border-bottom: @len1 solid @color;
+  border-right: @len2 solid transparent;
+}
+
+.shapes-item {
+  display: flex;
+  flex-wrap: wrap;
+
+  div {
+    background: black;
+    margin-right: 5px;
+
+    &#circle {
+      width: @width;
+      padding-top: @width;
+      border-radius: 50%;
+    }
+
+    &#oval {
+      width: @width * 2;
+      padding-top: @width;
+      border-radius: 50%;
+    }
+
+    &#triangle {
+      background-color: transparent;
+      .triangle(@width, @width / 3, @width);
+    }
+
+    &#isosceles-triangle {
+      background-color: transparent;
+      .isosceles-triangle(@width / 2, @width);
+    }
+
+    &#right-triangle {
+      background-color: transparent;
+      .right-triangle(@width, @width);
+    }
+
+    &#trapezoid {
+      width: @width;
+      height: @width;
+      background-color: transparent;
+      .isosceles-triangle(@width / 4, @width);
+    }
+
+    &#parallelogram {
+      margin-left: 20px;
+      width: @width;
+      padding-top: @width;
+      transform: skew(20deg);
+    }
+
+    &#star {
+      .isosceles-triangle(@width / 2, @width);
+
+      margin-left: 20px;
+      position: relative;
+      top: -10px;
+      background-color: transparent;
+
+      transform: scale(0.7);
+      &::after {
+        .isosceles-triangle(@width / 2, @width);
+
+        transform: rotate(180deg);
+        position: absolute;
+        content: '';
+        top: @width / 3px;
+        left: -@width / 2px;
+      }
+    }
+
+    &#star-five {
+      .isosceles-triangle(@width / 2, 28px);
+
+      background-color: transparent;
+      margin: @width / 4 0;
+      position: relative;
+      width: 0px;
+      height: 0px;
+
+      transform: rotate(35deg);
+
+      &::before {
+        .isosceles-triangle(12px, 32px);
+
+        position: absolute;
+        top: -18px;
+        left: -26px;
+
+        transform: rotate(-35deg);
+        content: '';
+      }
+
+      &::after {
+        .isosceles-triangle(@width / 2, 28px);
+
+        position: absolute;
+        top: 1.2px;
+        left: -42px;
+
+        transform: rotate(-70deg);
+        content: '';
+      }
+    }
+  }
+}
