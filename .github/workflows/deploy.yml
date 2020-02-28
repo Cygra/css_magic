@@ -11,5 +11,6 @@ jobs:
       uses: actions/checkout@master
 
     - name: Build and Deploy
+      uses: Cygra/css_magic@master
       env:
         BUILD_SCRIPT: yarn && yarn run deploy
