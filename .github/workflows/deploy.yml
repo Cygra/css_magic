@@ -14,9 +14,11 @@ jobs:
         uses: actions/setup-node@master
         with:
           node-version: 10.x
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install dependencies
         run: yarn install
 
       - name: Build & deploy
         run: yarn run deploy
+
