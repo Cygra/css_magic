@@ -7,17 +7,16 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout Master
-      uses: actions/checkout@master
+      - name: Checkout Master
+        uses: actions/checkout@master
 
+      - name: Set Node.js
+        uses: actions/setup-node@master
+        with:
+          node-version: 10.x
 
-    - name: Set Node.js
-      uses: actions/setup-node@master
-      with:
-        node-version: 10.x
+      - name: Install dependencies
+        run: yarn install
 
-    - name: Install dependencies
-      run: yarn install --prod --pure-lockfile
-
-    - name: Build & deploy
-      run: yarn run deploy
+      - name: Build & deploy
+        run: yarn run deploy
